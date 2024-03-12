@@ -6,7 +6,8 @@ export default function cleanSet(set, start) {
   }
 
   return [...set]
-    .filter((element) => typeof element === 'string' && element.startsWith(start))
+    .filter((element) => typeof element === 'string')
+    .filter((element) => element.startsWith(start))
     .filter((element) => element.slice(start.length) !== element)
     .map((element) => element.slice(start.length))
     .join('-');
