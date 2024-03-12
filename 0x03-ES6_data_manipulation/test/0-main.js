@@ -6,6 +6,21 @@ import hasValuesFromArray from '../7-has_array_values';
 import cleanSet from '../8-clean_set';
 import updateUniqueItems from '../10-update_uniq_items';
 import groceriesList from '../9-groceries_list';
+import { queryAPI, weakMap } from '../100-weak';
+
+const endpoint = { protocol: 'http', name: 'getUsers' };
+weakMap.get(endpoint);
+
+queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
+queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
+queryAPI(endpoint);
+queryAPI(endpoint);
+queryAPI(endpoint);
+queryAPI(endpoint);
 
 const map = groceriesList();
 console.log(map);
