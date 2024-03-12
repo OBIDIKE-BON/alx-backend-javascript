@@ -4,8 +4,9 @@ export default function cleanSet(set, startString) {
   ) {
     return '';
   }
+
   return [...set]
-    .filter((element) => element.startsWith(startString && typeof element === 'string'))
+    .filter((element) => element.startsWith(startString) && typeof element === 'string')
     .map((element) => element.slice(startString.length))
     .join('-');
 }
