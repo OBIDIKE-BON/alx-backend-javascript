@@ -3,6 +3,10 @@ import updateStudentGradeByCity from '../4-update_grade_by_city';
 import createInt8TypedArray from '../5-typed_arrays';
 import setFromArray from '../6-set';
 import hasValuesFromArray from '../7-has_array_values';
+import cleanSet from '../8-clean_set';
+
+console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
+console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
 
 console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1]));
 console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [10]));
