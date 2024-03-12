@@ -6,7 +6,7 @@ export default function cleanSet(set, startString) {
   }
 
   return [...set]
-    .filter((element) => element.startsWith(startString) && typeof element === 'string')
+    .filter((element) => typeof element === 'string' && element.startsWith(startString))
     .map((element) => element.slice(startString.length))
     .join('-');
 }
