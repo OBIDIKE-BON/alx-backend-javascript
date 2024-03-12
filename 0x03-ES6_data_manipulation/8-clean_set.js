@@ -1,12 +1,12 @@
-export default function cleanSet(set, startString) {
+export default function cleanSet(set, start) {
   if (
-    !set && !startString && !(set instanceof Set) && typeof startString !== 'string'
+    !set && !start && !(set instanceof Set) && typeof start !== 'string'
   ) {
     return '';
   }
 
   return [...set]
-    .filter((element) => typeof element === 'string' && element.startsWith(startString))
-    .map((element) => element.slice(startString.length))
+    .filter((s) => typeof s === 'string' && s.startsWith(start) && s.slice(start.length) !== s)
+    .map((element) => element.slice(start.length))
     .join('-');
 }
