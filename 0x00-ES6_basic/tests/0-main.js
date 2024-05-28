@@ -1,3 +1,6 @@
-import createEmployeesObject from '../11-createEmployeesObject';
+import { taskFirst, taskNext } from '../0-constants';
 
-console.log(createEmployeesObject('Software', ['Bob', 'Sylvie']));
+// task 0 test
+console.log(`${taskFirst()} ${taskNext()}`);
+
+// task 1 test
